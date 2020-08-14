@@ -6,6 +6,16 @@
 <script src="/js/jquery.sticky.js"></script>
 <script src="/js/featherlight.min.js"></script>
 <script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 <script src="/js/modernizr.custom-3.6.0.js"></script>
 <script src="/js/learn.js"></script>
 <script src="/js/hugo-learn.js"></script>
+
+<link href="/mermaid/mermaid.css">
+
+<script src="/mermaid/mermaid.js"></script>
+
+<script>
+  mermaid.initialize({ startOnLoad: true });
+</script>
+{{ partial "custom-footer.html" . }}

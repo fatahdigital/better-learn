@@ -1,35 +1,37 @@
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {{ hugo.Generator }}
-  {{ partial "meta.html" . }}
-  <title>{{ .Title }} :: {{ .Site.Title }}</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ hugo.Generator }}
+    {{ partial "meta.html" . }}
+    <title>{{ .Title }} :: {{ .Site.Title }}</title>
 
-  {{- if .Site.IsServer -}}
-  {{ "<!-- Load CSS without minification -->" | safeHTML }}
-  {{ $mainCSS := resources.Get "css/main.scss" | toCSS }}
-  <link rel="stylesheet" media="screen" type="text/css" href="{{ $mainCSS.Permalink }}" />
-  
-  {{ else }}
+    {{- if .Site.IsServer -}}
+    {{ "<!-- Load CSS without minification -->" | safeHTML }}
+    {{ $mainCSS := resources.Get "css/main.scss" | toCSS }}
+    <link rel="stylesheet" media="screen" type="text/css" href="{{ $mainCSS.Permalink }}" />
+    
+    {{ else }}
 
-  {{ "<!-- Load CSS with minification and fingerprinting -->" | safeHTML }}
-  {{ $mainCSS := resources.Get "css/main.scss" | toCSS ( dict "enableSourceMap" true ) | minify | fingerprint }}
-  <link rel="stylesheet" media="screen" type="text/css" href="{{ $mainCSS.Permalink }}" />
-  
-  {{- end -}}
+    {{ "<!-- Load CSS with minification and fingerprinting -->" | safeHTML }}
+    {{ $mainCSS := resources.Get "css/main.scss" | toCSS ( dict "enableSourceMap" true ) | minify | fingerprint }}
+    <link rel="stylesheet" media="screen" type="text/css" href="{{ $mainCSS.Permalink }}" />
+    
+    {{- end -}}
 
-  <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/jquery-3.3.1.min.js"></script>
 
-  <style>
-    :root #header + #content > #left > #rlblock_left{
-        display:none !important;
-    }
-    {{ if .Site.Params.disableInlineCopyToClipBoard }}
-      :not(pre) > code + span.copy-to-clipboard {
-          display: none;
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
       }
-    {{ end }}
-  </style>
-  {{ partial "custom-header.html" . }}
- 
-</head>
+      {{ if .Site.Params.disableInlineCopyToClipBoard }}
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      {{ end }}
+    </style>
+    {{ partial "custom-header.html" . }}
+
+    {{ partial "favicon.html" . }}
+  
+  </head>

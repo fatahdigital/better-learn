@@ -1,0 +1,59 @@
+baseurl = "/"
+languageCode = "en"
+contentDir = "content"
+# Site language. Available translations in the theme's `/i18n` directory.
+defaultContentLanguage = "en"
+title = "Website Name"
+summaryLength = "30"
+# Enable Google Analytics by entering your tracking code
+googleAnalytics = ""
+
+
+# Define the number of posts per page
+Paginate = 3
+
+#Hugo version = 0.55.6
+#Hugo_version_link = "https://github.com/gohugoio/hugo/releases/tag/v0.55.6/"
+
+[blackFriday]
+  hrefTargetBlank = true
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+author = "authors"
+
+
+# Site Params
+[params]
+
+logo = "" # add logo  
+
+# Format dates with Go's time formatting
+date_format = "January 2, 2006"
+
+
+# Meta Data
+
+Description = "Add Meta Description"
+author = ""
+images = ["img/og.png"] # This will use the image called og.png in static/img folder
+
+
+# copyright
+copyright = "Copyright &copy; 2020 [link](link url) All Rights Reserved"
+
+# main menu
+
+[meun]
+
+[menu]
+    ## Menu bar
+    # [[menu.main]]
+    #     identifire= ""
+    #     url = "/"
+    #     name = "Home"
+    #     weight = 1
+    #     pre = "internal"
+    #     post = "home"
+

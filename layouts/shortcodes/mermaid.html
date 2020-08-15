@@ -1,2 +1,4 @@
-{{ $_hugo_config := `{ "version": 1 }` }}
-<div class="mermaid" align="{{ if .Get "align" }}{{ .Get "align" }}{{ else }}center{{ end }}">{{ safeHTML .Inner }}</div>
+{{- if .Site.IsServer -}} {{ "<!-- Shortcodes : mermaid.html -->" | safeHTML }} {{- end -}}
+  {{ $_hugo_config := `{ "version": 1 }` }}
+  <div class="mermaid" align="{{ if .Get "align" }}{{ .Get "align" }}{{ else }}center{{ end }}">{{ safeHTML .Inner }}</div>
+{{- if .Site.IsServer -}} {{ "<!-- END Shortcodes : mermaid.html -->" | safeHTML }} {{- end -}}

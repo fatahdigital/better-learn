@@ -6,19 +6,7 @@
     {{ partial "meta.html" . }}
     <title>{{ .Title }} :: {{ .Site.Title }}</title>
 
-    {{- if .Site.IsServer -}}
-      {{ "<!-- Load CSS without minification -->" | safeHTML }}
-      {{ $mainCSS := resources.Get "css/main.scss" | toCSS }}
-      <link rel="stylesheet" media="screen" type="text/css" href="{{ $mainCSS.Permalink }}" />
-      
-    {{ else }}
-
-      {{ "<!-- Load CSS with minification and fingerprinting -->" | safeHTML }}
-      {{ $mainCSS := resources.Get "css/main.scss" | toCSS ( dict "enableSourceMap" true ) | minify | fingerprint }}
-      <link rel="stylesheet" media="screen" type="text/css" href="{{ $mainCSS.Permalink }}" />
-    
-    {{- end -}}
-    
+    <link href="/css/main.css" rel="stylesheet" type="text/css">
 
     {{ range .Site.Params.custom_css -}}
       <link href="{{(printf "%s" .) | relURL}}" rel="stylesheet">

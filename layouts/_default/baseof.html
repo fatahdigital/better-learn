@@ -9,7 +9,6 @@
         <section id="body">
           <div id="overlay"></div>
           
-      
           <div class="padding highlightable">
           
             {{if not .IsHome}}
@@ -29,64 +28,60 @@
                 {{ end }}
                 {{$toc := (and (not .Params.disableToc) (not .Params.chapter))}}
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                    <span id="sidebar-toggle-span">
-                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
-                          <i class="fas fa-bars"></i>
-                        </a>
-                    </span>
+                  <span id="sidebar-toggle-span">
+                      <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                        <i class="fas fa-bars"></i>
+                      </a>
+                  </span>
                   {{ if $toc }}
-                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                    <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
                   {{ end }}
                   <span class="links">
-                  {{$showBreadcrumb := (and (not .Params.disableBreadcrumb) (not .Site.Params.disableBreadcrumb))}}
-                  {{if $showBreadcrumb}}
-                    {{ template "breadcrumb" dict "page" . "value" .Title }}
-                  {{ else }}
-                    {{ .Title }}
-                  {{ end }}
+                    {{$showBreadcrumb := (and (not .Params.disableBreadcrumb) (not .Site.Params.disableBreadcrumb))}}
+                    {{if $showBreadcrumb}}
+                      {{ template "breadcrumb" dict "page" . "value" .Title }}
+                    {{ else }}
+                      {{ .Title }}
+                    {{ end }}
                   </span>
                 </div>
                 {{ if $toc }}
-                    {{ partial "toc.html" . }}
+                  {{ partial "toc.html" . }}
                 {{ end }}
               </div>
-              </div>
+            </div>
             {{ end }}
             <div id="head-tags">
               {{ partial "tags.html" . }}
             </div>
             {{ if .Params.chapter }}
               <div id="chapter">
-              {{ end }}
-              <div id="body-inner">
-                {{ block "main" . }}
-                  {{if and (not .IsHome) (not .Params.chapter) }}
-                  <h1>
-                    {{ if eq .Kind "taxonomy" }}
-                      {{.Kind}} ::
-                    {{ end }}
-                    {{.Title}}
-                  </h1>
-                  {{end}}
-                {{ end }}
-                
-
-              {{ partial "breadcrumb.html" . }}
-              </div>
-          {{ if .Params.chapter }}
-              </div> <!-- end chapter-->
             {{ end }}
+            <div id="body-inner">
+              {{ block "main" . }}
+                {{if and (not .IsHome) (not .Params.chapter) }}
+                <h1>
+                  {{ if eq .Kind "taxonomy" }}
+                    {{.Kind}} ::
+                  {{ end }}
+                  {{.Title}}
+                </h1>
+                {{end}}
+              {{ end }}
+              {{ partial "breadcrumb.html" . }}
+            </div>
+          {{ if .Params.chapter }}
+            </div> <!-- end chapter-->
+          {{ end }}
           </div> 
-        {{ partial "custom-comments.html" . }}
-        {{ partial "footer.html" . }}
-    
+          {{ partial "custom-comments.html" . }}
+          {{ partial "footer.html" . }}
+      
         </section>
         <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
           <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
         </div>
         {{ partial "script.html" . }}
-      
-        
       </body>
     </html>
 

@@ -1,5 +1,7 @@
-<div class="progress">
-    <div class="wrapper">
-{{ .TableOfContents }}
-    </div>
-</div>
+{{- if .Site.IsServer -}} {{ "<!-- Partial : toc.html -->" | safeHTML }} {{- end -}}
+	<div class="progress">
+			<div class="wrapper">
+	{{ .TableOfContents }}
+			</div>
+	</div>
+{{- if .Site.IsServer -}} {{ "<!-- END Partial : toc.html -->" | safeHTML }} {{- end -}}

@@ -1,5 +1,7 @@
-<!-- Partial intended to be overwritten to add custom headers, like CSS or any other info
-<style type="text/css">
-    /* Custom css */
-</style>
--->
+{{- if .Site.IsServer -}} {{ "<!-- Partial : custom-header.html -->" | safeHTML }} {{- end -}}
+    <!-- Partial intended to be overwritten to add custom headers, like CSS or any other info
+    <style type="text/css">
+        /* Custom css */
+    </style>
+    -->
+{{- if .Site.IsServer -}} {{ "<!-- END Partial : custom-header.html -->" | safeHTML }} {{- end -}}

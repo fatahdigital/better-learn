@@ -1,91 +1,93 @@
 <!DOCTYPE html>
 
-<html lang="{{ .Page.Language | default "en" }}" class="js csstransforms3d">
-  {{ partial "head.html" . }}
+  {{- if .Site.IsServer -}} {{ "<!-- _default : BaseOf.html -->" | safeHTML }} {{- end -}}
+    <html lang="{{ .Page.Language | default "en" }}" class="js csstransforms3d">
+      {{ partial "head.html" . }}
 
-  <body class="" data-url="{{ .RelPermalink }}">
-    {{ partial "menu.html" . }}
-    <section id="body">
-      <div id="overlay"></div>
+      <body class="" data-url="{{ .RelPermalink }}">
+        {{ partial "menu.html" . }}
+        <section id="body">
+          <div id="overlay"></div>
+          
       
-  
-      <div class="padding highlightable">
-      
-        {{if not .IsHome}}
-          <div>
-            <div id="top-bar">
-            {{ if and (or .IsPage .IsSection) .Site.Params.editURL }}
-              {{ $File := .File }}
-              {{ $Site := .Site }}
-              {{with $File.Path }}
-              <div id="top-github-link">
-                <a class="github-link" title='{{T "Edit-this-page"}}' href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank">
-                  <i class="fas fa-code-branch"></i>
-                  <span id="top-github-link-text">{{T "Edit-this-page"}}</span>
-                </a>
-              </div>
-              {{ end }}
-            {{ end }}
-            {{$toc := (and (not .Params.disableToc) (not .Params.chapter))}}
-            <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                <span id="sidebar-toggle-span">
-                    <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
-                      <i class="fas fa-bars"></i>
+          <div class="padding highlightable">
+          
+            {{if not .IsHome}}
+              <div>
+                <div id="top-bar">
+                {{ if and (or .IsPage .IsSection) .Site.Params.editURL }}
+                  {{ $File := .File }}
+                  {{ $Site := .Site }}
+                  {{with $File.Path }}
+                  <div id="top-github-link">
+                    <a class="github-link" title='{{T "Edit-this-page"}}' href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">{{T "Edit-this-page"}}</span>
                     </a>
-                </span>
-              {{ if $toc }}
-              <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
-              {{ end }}
-              <span class="links">
-              {{$showBreadcrumb := (and (not .Params.disableBreadcrumb) (not .Site.Params.disableBreadcrumb))}}
-              {{if $showBreadcrumb}}
-                {{ template "breadcrumb" dict "page" . "value" .Title }}
-              {{ else }}
-                {{ .Title }}
-              {{ end }}
-              </span>
-            </div>
-            {{ if $toc }}
-                {{ partial "toc.html" . }}
-            {{ end }}
-          </div>
-          </div>
-        {{ end }}
-        <div id="head-tags">
-          {{ partial "tags.html" . }}
-        </div>
-        {{ if .Params.chapter }}
-          <div id="chapter">
-          {{ end }}
-          <div id="body-inner">
-            {{ block "main" . }}
-              {{if and (not .IsHome) (not .Params.chapter) }}
-              <h1>
-                {{ if eq .Kind "taxonomy" }}
-                  {{.Kind}} ::
+                  </div>
+                  {{ end }}
                 {{ end }}
-                {{.Title}}
-              </h1>
-              {{end}}
+                {{$toc := (and (not .Params.disableToc) (not .Params.chapter))}}
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  {{ if $toc }}
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  {{ end }}
+                  <span class="links">
+                  {{$showBreadcrumb := (and (not .Params.disableBreadcrumb) (not .Site.Params.disableBreadcrumb))}}
+                  {{if $showBreadcrumb}}
+                    {{ template "breadcrumb" dict "page" . "value" .Title }}
+                  {{ else }}
+                    {{ .Title }}
+                  {{ end }}
+                  </span>
+                </div>
+                {{ if $toc }}
+                    {{ partial "toc.html" . }}
+                {{ end }}
+              </div>
+              </div>
             {{ end }}
-            
+            <div id="head-tags">
+              {{ partial "tags.html" . }}
+            </div>
+            {{ if .Params.chapter }}
+              <div id="chapter">
+              {{ end }}
+              <div id="body-inner">
+                {{ block "main" . }}
+                  {{if and (not .IsHome) (not .Params.chapter) }}
+                  <h1>
+                    {{ if eq .Kind "taxonomy" }}
+                      {{.Kind}} ::
+                    {{ end }}
+                    {{.Title}}
+                  </h1>
+                  {{end}}
+                {{ end }}
+                
 
-          {{ partial "breadcrumb.html" . }}
-          </div>
-      {{ if .Params.chapter }}
-          </div> <!-- end chapter-->
-        {{ end }}
-      </div> 
-    {{ partial "custom-comments.html" . }}
-    {{ partial "footer.html" . }}
- 
-    </section>
-    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
-      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
-    </div>
-    {{ partial "script.html" . }}
-   
+              {{ partial "breadcrumb.html" . }}
+              </div>
+          {{ if .Params.chapter }}
+              </div> <!-- end chapter-->
+            {{ end }}
+          </div> 
+        {{ partial "custom-comments.html" . }}
+        {{ partial "footer.html" . }}
     
-  </body>
-</html>
+        </section>
+        <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+          <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+        </div>
+        {{ partial "script.html" . }}
+      
+        
+      </body>
+    </html>
 
+  {{- if .Site.IsServer -}} {{ "<!-- END _default : BaseOf.html -->" | safeHTML }} {{- end -}}

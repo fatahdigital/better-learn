@@ -1,9 +1,11 @@
-{{define "breadcrumb"}}
-  {{$parent := .page.Parent }}
-  {{ if $parent }}
-    {{ $value := (printf "<a href='%s'>%s</a> > %s" $parent.RelPermalink $parent.Title .value) }}
-    {{ template "breadcrumb" dict "page" $parent "value" $value }}
-  {{else}}
-    {{.value|safeHTML}}
+{{- if .Site.IsServer -}} {{ "<!-- Partial : breadcrumb.html -->" | safeHTML }} {{- end -}}
+  {{define "breadcrumb"}}
+    {{$parent := .page.Parent }}
+    {{ if $parent }}
+      {{ $value := (printf "<a href='%s'>%s</a> > %s" $parent.RelPermalink $parent.Title .value) }}
+      {{ template "breadcrumb" dict "page" $parent "value" $value }}
+    {{else}}
+      {{.value|safeHTML}}
+    {{end}}
   {{end}}
-{{end}}
+{{- if .Site.IsServer -}} {{ "<!-- END Partial : breadcrumb.html -->" | safeHTML }} {{- end -}}

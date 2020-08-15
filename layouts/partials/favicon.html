@@ -1,1 +1,3 @@
-<link rel="icon" href="{{"/favicon.png" | relURL}}" type="image/png">
+{{- if .Site.IsServer -}} {{ "<!-- Partial : Favicon.html -->" | safeHTML }} {{- end -}}
+  <link rel="icon" href="{{"/favicon.png" | relURL}}" type="image/png">
+{{- if .Site.IsServer -}} {{ "<!-- END Partial : Favicon.html -->" | safeHTML }} {{- end -}}

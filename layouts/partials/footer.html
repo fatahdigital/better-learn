@@ -1,4 +1,4 @@
-{{- if .Site.IsServer -}} {{ "<!-- partials : footer.html -->" | safeHTML }} {{- end -}}
+{{- if .Site.IsServer -}} {{ "<!-- Partial : footer.html -->" | safeHTML }} {{- end -}}
 	<div id="navigation">
 			<!-- Next prev page -->
 			{{ $currentNode := . }}
@@ -44,7 +44,7 @@
 			{{end}}
 	{{end}}
 	</div>
-{{- if .Site.IsServer -}} {{ "<!-- END partials : footer.html -->" | safeHTML }} {{- end -}}
+{{- if .Site.IsServer -}} {{ "<!-- END Partial : footer.html -->" | safeHTML }} {{- end -}}
 
 
   

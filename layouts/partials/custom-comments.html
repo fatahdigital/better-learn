@@ -1,3 +1,7 @@
-<!-- import your comments system 
-{{ template "_internal/disqus.html" . }}
--->
+{{- if .Site.IsServer -}} {{ "<!-- Partial : Breadcrumb.html -->" | safeHTML }} {{- end -}}
+
+  <!-- import your comments system 
+  {{ template "_internal/disqus.html" . }}
+  -->
+
+{{- if .Site.IsServer -}} {{ "<!-- END Partial : Breadcrumb.html -->" | safeHTML }} {{- end -}}

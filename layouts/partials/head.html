@@ -1,3 +1,4 @@
+{{- if .Site.IsServer -}} {{ "<!-- Partial : head.html -->" | safeHTML }} {{- end -}}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,15 +7,15 @@
     <title>{{ .Title }} :: {{ .Site.Title }}</title>
 
     {{- if .Site.IsServer -}}
-    {{ "<!-- Load CSS without minification -->" | safeHTML }}
-    {{ $mainCSS := resources.Get "css/main.scss" | toCSS }}
-    <link rel="stylesheet" media="screen" type="text/css" href="{{ $mainCSS.Permalink }}" />
-    
+      {{ "<!-- Load CSS without minification -->" | safeHTML }}
+      {{ $mainCSS := resources.Get "css/main.scss" | toCSS }}
+      <link rel="stylesheet" media="screen" type="text/css" href="{{ $mainCSS.Permalink }}" />
+      
     {{ else }}
 
-    {{ "<!-- Load CSS with minification and fingerprinting -->" | safeHTML }}
-    {{ $mainCSS := resources.Get "css/main.scss" | toCSS ( dict "enableSourceMap" true ) | minify | fingerprint }}
-    <link rel="stylesheet" media="screen" type="text/css" href="{{ $mainCSS.Permalink }}" />
+      {{ "<!-- Load CSS with minification and fingerprinting -->" | safeHTML }}
+      {{ $mainCSS := resources.Get "css/main.scss" | toCSS ( dict "enableSourceMap" true ) | minify | fingerprint }}
+      <link rel="stylesheet" media="screen" type="text/css" href="{{ $mainCSS.Permalink }}" />
     
     {{- end -}}
 
@@ -35,3 +36,4 @@
     {{ partial "favicon.html" . }}
   
   </head>
+{{- if .Site.IsServer -}} {{ "<!-- END Partial : head.html -->" | safeHTML }} {{- end -}}

@@ -14,6 +14,7 @@ defaultContentLanguageInSubdir= true
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false
+  customCSS = ["/css/_home.scss"]
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]

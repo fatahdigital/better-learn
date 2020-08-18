@@ -1,5 +1,11 @@
 ---
 title: Showcase
+
+description: "Showcase | Documentation for Hugo Better Learn Theme"
+summary : "Showcase | Documentation for Hugo Better Learn Theme"
+images: 
+  - "/images/"
+
 disableToc: true
 ---
 

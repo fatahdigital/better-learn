@@ -1,6 +1,12 @@
 ---
 title: 基础
 weight: 5
+
+description: "基础 | Documentation for Hugo Better Learn Theme"
+summary : "基础 | Documentation for Hugo Better Learn Theme"
+images: 
+  - "/images/"
+
 pre: "<b>1. </b>"
 chapter: true
 ---

@@ -1,6 +1,12 @@
 ---
 date: 2016-04-09T16:50:16+02:00
 title: Multi-langue et i18n
+
+description: "Multi-langue et i18n | Documentation for Hugo Better Learn Theme"
+summary : "Multi-langue et i18n | Documentation for Hugo Better Learn Theme"
+images: 
+  - "/images/"
+
 weight: 30
 ---
 

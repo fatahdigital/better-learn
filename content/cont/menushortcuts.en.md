@@ -1,6 +1,12 @@
 ---
 date: 2016-04-09T16:50:16+02:00
 title: Menu extra shortcuts
+
+description: "Menu extra shortcuts | Documentation for Hugo Better Learn Theme"
+summary : "Menu extra shortcuts | Documentation for Hugo Better Learn Theme"
+images: 
+  - "/images/"
+
 weight: 25
 ---
 

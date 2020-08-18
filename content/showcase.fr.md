@@ -1,5 +1,11 @@
 ---
 title: Vitrine
+
+description: "Vitrine | Documentation for Hugo Better Learn Theme"
+summary : "Vitrine | Documentation for Hugo Better Learn Theme"
+images: 
+  - "/images/"
+
 disableToc: true
 slug: vitrine
 ---

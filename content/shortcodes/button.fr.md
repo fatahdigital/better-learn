@@ -1,6 +1,10 @@
 ---
 title: Button (Bouton)
-description : "De beaux boutons sur votre page."
+
+description: "De beaux boutons sur votre page."
+summary : "De beaux boutons sur votre page."
+images: 
+  - "/images/"
 ---
 
 Le shortcode *button* est simplement un bouton cliquable avec une icône optionnelle.

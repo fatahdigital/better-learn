@@ -1,6 +1,12 @@
 ---
 date: 2016-04-09T16:50:16+02:00
 title: Personnalisation du style
+
+description: "Personnalisation du style | Documentation for Hugo Better Learn Theme"
+summary : "Personnalisation du style | Documentation for Hugo Better Learn Theme"
+images: 
+  - "/images/"
+
 weight: 25
 ---
 

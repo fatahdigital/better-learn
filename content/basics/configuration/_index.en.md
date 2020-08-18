@@ -1,6 +1,12 @@
 ---
 date: 2016-04-09T16:50:16+02:00
 title: Configuration
+
+description: "Configuration | Documentation for Hugo Better Learn Theme"
+summary : "Configuration | Documentation for Hugo Better Learn Theme"
+images: 
+  - "/images/"
+
 weight: 20
 ---
 

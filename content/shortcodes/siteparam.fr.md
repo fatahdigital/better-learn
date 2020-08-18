@@ -1,6 +1,10 @@
 ---
 title: Site param
-description : "Afficher la valeur d'un paramètre global du site dans votre page"
+
+description: "Afficher la valeur d'un paramètre global du site dans votre page"
+summary : "Afficher la valeur d'un paramètre global du site dans votre page"
+images: 
+  - "/images/"
 ---
 
 Les shortcode `siteparam` est utilisé pour vous aider à afficher des valeurs provenant des paramètres globaux du site. 

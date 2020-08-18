@@ -1,6 +1,10 @@
 ---
 title : "Mermaid"
-description : "Génération de diagrammes à partir de texte, dans le même style que Markdown"
+
+description: "Génération de diagrammes à partir de texte, dans le même style que Markdown"
+summary : "Génération de diagrammes à partir de texte, dans le même style que Markdown"
+images: 
+  - "/images/"
 ---
 
 [Mermaid](https://mermaidjs.github.io/) est une bibliothèque Javascript qui permet de générer des diagrammes (séquence, état, gantt, etc.) à partir de texte, dans le même style que Markdown.

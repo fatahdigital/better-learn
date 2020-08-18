@@ -1,6 +1,10 @@
 ---
 title: Button
-description : "Nice buttons on your page."
+
+description: "Nice buttons on your page."
+summary : "Nice buttons on your page."
+images: 
+  - "/images/"
 ---
 
 A button is a just a clickable button with optional icon.

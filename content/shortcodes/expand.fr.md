@@ -1,6 +1,10 @@
 ---
 title : Expand
-description : "Affiche une section de texte qui se plie et se déplie"
+
+description: "Affiche une section de texte qui se plie et se déplie"
+summary : "Affiche une section de texte qui se plie et se déplie"
+images: 
+  - "/images/"
 ---
 
 Le shortcode *Expand* affiche une section de texte qui se plie et se déplie.

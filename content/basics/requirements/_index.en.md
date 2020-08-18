@@ -1,5 +1,11 @@
 ---
 title: Requirements
+
+description: "Requirements | Documentation for Hugo Better Learn Theme"
+summary : "Requirements | Documentation for Hugo Better Learn Theme"
+images: 
+  - "/images/"
+
 weight: 10
 disableToc: true
 ---

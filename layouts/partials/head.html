@@ -4,10 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{ hugo.Generator }}
     {{ partial "meta.html" . }}
-    {{- template "_internal/opengraph.html" . -}}
-    {{- template "_internal/schema.html" . -}}
-    {{- template "_internal/twitter_cards.html" . -}}
-    {{- template "_internal/google_analytics.html" . -}}
+    
     <title>{{ .Title }} :: {{ .Site.Title }}</title>
 
     <link href="/css/main.css" rel="stylesheet" type="text/css">
@@ -32,7 +29,7 @@
         }
       {{ end }}
     </style>
-    {{ partial "custom-header.html" . }}
+    {{ partial "custom-head.html" . }}
 
     {{ partial "favicon.html" . }}
   

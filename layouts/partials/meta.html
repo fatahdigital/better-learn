@@ -3,4 +3,9 @@
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
   {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
 
+  {{- template "_internal/opengraph.html" . -}}
+  {{- template "_internal/schema.html" . -}}
+  {{- template "_internal/twitter_cards.html" . -}}
+  {{- template "_internal/google_analytics.html" . -}}
+
 {{- if .Site.IsServer -}} {{ "<!-- END Partial : meta.html -->" | safeHTML }} {{- end -}}

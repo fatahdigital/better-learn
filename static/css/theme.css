@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* Tags */
-@import "_tags.scss";
+@import "tags.css";
 
 #top-github-link, #body #breadcrumbs {
     position: relative;

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-  {{- if .Site.IsServer -}} {{ "<!-- _default : BaseOf.html -->" | safeHTML }} {{- end -}}
+  {{- if .Site.IsServer -}} {{ "<!-- _default : baseof.html -->" | safeHTML }} {{- end -}}
     <html lang="{{ .Page.Language | default "en" }}" class="js csstransforms3d">
       {{ partial "head.html" . }}
 
@@ -76,6 +76,7 @@
           </div> 
           {{ partial "custom-comments.html" . }}
           {{ partial "footer.html" . }}
+          {{ partial "custom-footer.html" . }}
       
         </section>
         <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
@@ -85,4 +86,4 @@
       </body>
     </html>
 
-  {{- if .Site.IsServer -}} {{ "<!-- END _default : BaseOf.html -->" | safeHTML }} {{- end -}}
+  {{- if .Site.IsServer -}} {{ "<!-- END _default : baseof.html -->" | safeHTML }} {{- end -}}

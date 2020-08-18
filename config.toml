@@ -32,11 +32,13 @@ paginate = 10  # Number of items per page in paginated lists.
 
 title_separator = "-"
 
+
+## Added Google Tags Manager id and added Google Analytics id
 google_analytics = ""
 google_tag_manager = ""
 
-repository = ""
-masthead_title = ""
+repository = "https://github.com/fatahdigital/better-learn"
+masthead_title = "" # # overrides the website title displayed in the masthead, use " " for no title
 
 search = "true" # true, false (default)
 search_full_content = "false" # true, false (default)
@@ -60,7 +62,7 @@ facebook_url = ""
    hrefTargetBlank = true
 
 [params]
-  editURL = "https://github.com/fatahdigital/better-learn/content/"
+  editURL = "https://github.com/fatahdigital/better-learn/edit/master/exampleSite/content/" ### change url
   description = "Documentation for Hugo Better Learn Theme"
   author = "Mathieu Cornic"
   showVisitedLinks = true

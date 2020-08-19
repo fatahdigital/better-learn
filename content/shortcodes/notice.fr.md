@@ -1,11 +1,6 @@
 ---
 title: Notice
-
-description: "Message pour vous aider à structurer votre contenu"
-summary : "Message pour vous aider à structurer votre contenu"
-images: 
-  - "/images/"
-  
+description : "Message pour vous aider à structurer votre contenu"
 ---
 
 Le shortcode *Notice* permet d'afficher 4 types de message pour vous aider à structurer votre contenu.

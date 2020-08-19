@@ -1,11 +1,5 @@
 ---
 title: Installation
-
-description: "Installation | Documentation for Hugo Better Learn Theme"
-summary : "Installation | Documentation for Hugo Better Learn Theme"
-images: 
-  - "/images/"
-
 weight: 15
 ---
 

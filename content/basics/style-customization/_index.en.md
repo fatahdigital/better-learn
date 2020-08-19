@@ -1,12 +1,6 @@
 ---
 date: 2016-04-09T16:50:16+02:00
 title: Style customization
-
-description: "Style customization | Documentation for Hugo Better Learn Theme"
-summary : "Style customization | Documentation for Hugo Better Learn Theme"
-images: 
-  - "/images/"
-
 weight: 25
 ---
 

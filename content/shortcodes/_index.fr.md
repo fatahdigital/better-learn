@@ -1,12 +1,6 @@
 ---
 date: 2016-04-09T16:50:16+02:00
 title: Shortcodes
-
-description: "Shortcodes | Documentation for Hugo Better Learn Theme"
-summary : "Shortcodes | Documentation for Hugo Better Learn Theme"
-images: 
-  - "/images/"
-
 pre: "<b>3. </b>"
 weight: 15
 ---

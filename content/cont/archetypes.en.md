@@ -1,12 +1,5 @@
 ---
 title: Archetypes
-
-description: "Archetypes | Documentation for Hugo Better Learn Theme"
-summary : "Archetypes | Documentation for Hugo Better Learn Theme"
-images: 
-  - "/images/"
-
-
 weight: 10
 ---
 

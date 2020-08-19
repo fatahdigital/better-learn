@@ -1,10 +1,6 @@
 ---
 title: Attachments (Pièces jointes)
-
-description: "The Attachments shortcode displays a list of files attached to a page."
-summary : "The Attachments shortcode displays a list of files attached to a page."
-images: 
-  - "/images/"
+description : "The Attachments shortcode displays a list of files attached to a page."
 ---
 
 Le shortcode *Attachments* affiche une liste de pièces jointes d'une page.

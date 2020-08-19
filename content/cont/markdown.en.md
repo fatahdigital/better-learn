@@ -1,12 +1,6 @@
 ---
 date: 2016-04-09T16:50:16+02:00
 title: Markdown syntax
-
-description: "Markdown syntax | Documentation for Hugo Better Learn Theme"
-summary : "Markdown syntax | Documentation for Hugo Better Learn Theme"
-images: 
-  - "/images/"
-
 weight: 15
 ---
 

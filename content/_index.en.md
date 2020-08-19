@@ -1,9 +1,5 @@
 ---
-title: "Better Learn Theme for Hugo"
-description: "Documentation for Hugo Better Learn Theme"
-summary : "Documentation for Hugo Better Learn Theme"
-images: 
-  - "/images/"
+title: "Learn Theme for Hugo"
 ---
 
 # Hugo learn theme

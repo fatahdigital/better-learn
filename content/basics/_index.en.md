@@ -1,11 +1,5 @@
 ---
 title: Basics
-
-description: "Basics | Documentation for Hugo Better Learn Theme"
-summary : "Basics | Documentation for Hugo Better Learn Theme"
-images: 
-  - "/images/"
-
 weight: 5
 pre: "<b>1. </b>"
 chapter: true

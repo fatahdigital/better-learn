@@ -1,12 +1,6 @@
 ---
 date: 2020-06-01T13:31:12+01:00
 title: Code highlighting
-
-description: "Code highlighting | Documentation for Hugo Better Learn Theme"
-summary : "Code highlighting | Documentation for Hugo Better Learn Theme"
-images: 
-  - "/images/"
-
 weight: 16
 ---
 

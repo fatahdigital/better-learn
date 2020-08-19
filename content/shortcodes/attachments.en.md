@@ -1,10 +1,6 @@
 ---
 title: Attachments
-
-description: "The Attachments shortcode displays a list of files attached to a page."
-summary : "The Attachments shortcode displays a list of files attached to a page."
-images: 
-  - "/images/"
+description : "The Attachments shortcode displays a list of files attached to a page."
 ---
 
 The Attachments shortcode displays a list of files attached to a page.

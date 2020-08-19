@@ -1,11 +1,5 @@
 ---
 title: Icons and logos
-
-description: "Icons and logos | Documentation for Hugo Better Learn Theme"
-summary : "Icons and logos | Documentation for Hugo Better Learn Theme"
-images: 
-  - "/images/"
-
 weight: 27
 ---
 

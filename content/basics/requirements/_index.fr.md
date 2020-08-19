@@ -1,11 +1,5 @@
 ---
 title: Prérequis
-
-description: "Prérequis | Documentation for Hugo Better Learn Theme"
-summary : "Prérequis | Documentation for Hugo Better Learn Theme"
-images: 
-  - "/images/"
-
 weight: 10
 disableToc: true
 ---

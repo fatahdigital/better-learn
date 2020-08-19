@@ -1,12 +1,6 @@
 ---
 date: 2018-11-29T08:41:44+01:00
 title: Tags
-
-description: "Tags | Documentation for Hugo Better Learn Theme"
-summary : "Tags | Documentation for Hugo Better Learn Theme"
-images: 
-  - "/images/"
-
 weight: 40
 tags: ["documentation", "tutorial"]
 ---

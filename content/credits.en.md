@@ -1,11 +1,5 @@
 ---
 title: Credits
-
-description: "Credits | Documentation for Hugo Better Learn Theme"
-summary : "Credits | Documentation for Hugo Better Learn Theme"
-images: 
-  - "/images/"
-
 disableToc: true
 ---
 

@@ -1,10 +1,6 @@
 ---
 title : Expand
-
-description: "Displays an expandable/collapsible section of text on your page"
-summary : "Displays an expandable/collapsible section of text on your page"
-images: 
-  - "/images/"
+description : "Displays an expandable/collapsible section of text on your page"
 ---
 
 The Expand shortcode displays an expandable/collapsible section of text on your page.

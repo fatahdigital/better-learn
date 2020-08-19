@@ -1,10 +1,6 @@
 ---
 title: Site param
-
-description: "Get value of site params variables in your page."
-summary : "Get value of site params variables in your page."
-images: 
-  - "/images/"
+description : "Get value of site params variables in your page."
 ---
 
 `siteparam` shortcode is used to help you print values of site params. 
